@@ -1,0 +1,21 @@
+
+public class Manager extends Employee {
+	int i=0;
+	Manager(){
+		
+	}
+	private Employee managedemployees[]=new Employee[2];
+	Manager(int id,String name){
+		super(id,name);
+	}
+	
+	public Employee[] getManagedDetails() {
+		return managedemployees;
+	}
+	
+	public void addEmployees(Employee emp) {
+		managedemployees[i]= emp;
+		//System.out.println(managedemployees[i]);
+		i++;
+	}
+}
