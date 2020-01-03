@@ -1,0 +1,33 @@
+package bank.ui;
+
+import bank.entity.Account;
+
+public class CustomerInfo{
+	
+	public void DisplayInfo(Account[] obj) {
+		
+		for(Account a:obj) {
+			System.out.println("Account Details : \n");
+			System.out.println("Name : "+a.name +"\n "+"Balance : "+a.balance);
+		}
+		System.out.println("200 Amount is transferred from Herry to Tom");
+	}
+	public static void main(String[] args) {
+	
+	Account data[]=new Account[2];
+	data[0]=new Account(1,"Tom",5000);
+	data[1]=new Account(2,"Herry",6000);
+	
+	data[0].UpdateAccount1(5000);
+	data[1].UpdateAccount1(3000);
+	
+	CustomerInfo c = new CustomerInfo();
+	
+	//
+	
+	//Account a = new Account();
+	data[1].transfer(data[0],200);
+	c.DisplayInfo(data);
+	
+	}
+}

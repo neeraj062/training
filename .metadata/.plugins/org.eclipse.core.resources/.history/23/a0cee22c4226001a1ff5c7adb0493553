@@ -1,0 +1,18 @@
+
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//int a=10,b=30;
+		//String c,d;
+		Calculator cal = new Calculator();
+		System.out.println("Added Integer Value = "+cal.add(10,20));
+		
+		System.out.println("Added Float Value = "+cal.add(10.8f,11.4f));
+		
+		System.out.println("Added Float Value = "+cal.add("FirstName","LastName"));
+		
+		
+	}
+
+}

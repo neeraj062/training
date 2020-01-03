@@ -1,0 +1,26 @@
+package exceptions;
+
+import col.Employee;
+
+public class ExceptionEx {
+	private Employee employee;
+	
+	public static void main(String[] args) {
+		ExceptionEx ex= new ExceptionEx();
+		ex.execute();
+		System.out.println("after execute in main");
+	}
+	
+	public void execute() {
+		try {
+			//int id = employee.getId();
+			
+			Throwable e = new NullPointerException();
+			throw e;
+			System.out.println("after handling Exception");
+		}catch( Throwable e) {
+			//e.printStackTrace();
+			System.out.println("handled Exception");
+		}
+	}
+}

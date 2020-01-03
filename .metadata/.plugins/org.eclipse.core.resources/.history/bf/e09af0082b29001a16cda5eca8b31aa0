@@ -1,0 +1,23 @@
+package collections;
+
+import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class ArrayListEx {
+	public static void main(String[] args) {
+		List list=new ArrayList();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		Object o=list.get(0);
+		int firstElement=(int)o;
+		
+		for(Object e : list) {
+			int num=(int)e;
+			System.out.println(num);
+		}
+		list.remove(1);
+	}
+}

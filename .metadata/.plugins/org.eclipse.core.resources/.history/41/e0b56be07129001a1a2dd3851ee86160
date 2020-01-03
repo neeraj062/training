@@ -1,0 +1,5 @@
+package wallet.entity;
+
+public class CustomerWallet {
+
+}

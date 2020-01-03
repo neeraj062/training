@@ -1,0 +1,42 @@
+package collections;
+
+import java.lang.*;
+import java.util.*;
+import java.util.List;
+
+
+public class ArrayListEx {
+	public void print(List list) {
+		for(Object e : list) {
+			int num=(int)e;
+			System.out.println(num);
+		}
+	}
+	public static void main(String[] args) {
+		List list=new LinkedList();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(6);
+		Object o=list.get(0);
+		int firstElement=(int)o;
+		System.out.println("First Element = "+firstElement);
+		
+		ArrayListEx ex= new ArrayListEx();
+		ex.print(list);
+		
+		
+		list.remove(1);
+		System.out.println("After removing position 1");
+		ex.print(list);
+		Object object=3;
+		list.remove(object);
+		System.out.println("After removing object 3 ");
+		ex.print(list);
+		System.out.println("After setting value at 1 ");
+		list.add(0,1);
+		ex.print(list);
+	}
+}

@@ -1,0 +1,65 @@
+package collections;
+
+import java.lang.*;
+import java.util.*;
+import java.util.List;
+
+
+public class ArrayListEx {
+	private static IntegerComparator comparator;
+
+	public void print(List<Integer> list) {
+		for(Object e : list) {
+			int num=(int)e;
+			System.out.println(num);
+		}
+	}
+	
+	public void printByIterator(List<Integer> list) {
+		System.out.println("Iterator ");
+		Iterator<Integer> iterator=list.iterator();
+		while(iterator.hasNext()) {
+			Object o = iterator.next();
+			int num = (int)o;
+			System.out.println("elements = "+num);
+		}
+	}
+	
+	public static void main(String[] args) {
+		List<Integer> list=new LinkedList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(6);
+		int firstElement=list.get(0);
+		System.out.println("First Element = "+firstElement);
+		
+		ArrayListEx ex= new ArrayListEx();
+		ex.print(list);
+		
+		
+		list.remove(1);
+		System.out.println("After removing position 1");
+		ex.print(list);
+		Object object=3;
+		list.remove(object);
+		System.out.println("After removing object 3 ");
+		ex.print(list);
+		System.out.println("After setting value at 1 ");
+		list.add(0,9);
+		ex.print(list);
+		
+		int size=list.size();
+		System.out.println("ListSize = "+size);
+		
+		System.out.println("isListEmpty "+list.isEmpty());
+		System.out.println("itContains "+list.contains(1));
+		ex.printByIterator(list);
+		comparator = new IntegerComparator();
+		list.sort(comparator);
+		System.out.println("Sorted List");
+		ex.print(list);
+	}
+}

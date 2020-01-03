@@ -1,0 +1,57 @@
+package bank.entity;
+
+public class Account {
+	
+	private int AccountNo;
+	public int getAccountNo() {
+		return AccountNo;
+	}
+
+	public void setAccountNo(int accountNo) {
+		AccountNo = accountNo;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	private String name;
+	private double balance;
+	//public double TransferAmt;
+	
+	public Account(){		
+	}
+	
+	public Account(int accountNo, String name, double balance) {
+		super();
+		AccountNo = accountNo;
+		this.name = name;
+		this.balance = balance;
+	}
+
+	public void UpdateAccount1(double salary) {
+		balance+=salary;
+	}
+
+	//a1= new Account();
+	
+	public void transfer(Account ac1,double amt) {
+		//Account ac= new Account();
+		if(this.balance >= amt) {
+			ac1.UpdateAccount1(amt);
+			balance-=amt;
+		}		
+	}
+}

@@ -1,0 +1,12 @@
+package io;
+
+import java.io.*;
+
+public class IoEx2 {
+	public static void main(String[] args) {
+		IoEx2 ui = new IoEx2();
+		ui.execute();
+	}
+	
+	public void execute() th
+}

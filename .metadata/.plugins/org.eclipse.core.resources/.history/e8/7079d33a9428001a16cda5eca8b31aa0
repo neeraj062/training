@@ -1,0 +1,27 @@
+package bank.ui;
+
+import bank.entity.Account;
+
+public class CustomerInfo{
+	
+	public void DisplayInfo(Account obj) {
+		System.out.println(obj.name +" "+obj.balance);
+	}
+	public static void main(String[] args) {
+	
+	Account a1=new Account(1,"A",5000);
+	Account a2=new Account(2,"B",6000);
+	
+	a1.UpdateAccount(500);
+	a2.UpdateAccount(3000);
+	
+	CustomerInfo Cinfo = new CustomerInfo();
+	Cinfo.DisplayInfo(a1);
+	
+	Account a = new Account();
+	a.transfer(a2,400);
+	
+	Cinfo.DisplayInfo(a2);
+
+	}
+}
